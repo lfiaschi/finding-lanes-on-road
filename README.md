@@ -8,9 +8,10 @@ The goals is to make an image processing pipeline which detects lines on a video
 
 My pipeline consisted of 5 steps. 
 
-First, I converted the images to grayscale, then I use a canny edge detector to detect high grandient regions. 
+First, I converted the images to grayscale, then I use a canny edge detector to detect high grandient regions. After that the hough transform was used to detect lines. In order to draw a single line on the left and right lanes, I modified the draw_lines() function. I split the lines into right and left by looking at their inclination coeffiecients and then I take a robust median among all lines parameters.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function. I split the lines into right and left by looking at their inclination coeffiecients and then I take a robust median among all lines parameters.
+[image1]: ./pipeline.png "Pipeline"
+![alt text][image1]
 
 
 ## Shortcomings
